@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../src/assets/fonts/static/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../src/assets/fonts/static/PlusJakartaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    main {
+        max-width: 1000px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .results, .mortgage {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.currency-symbol {
+    @apply bg-slate-100;
+    @apply text-slate-700;
+}
+.input-container:focus-within .currency-symbol {
+    @apply bg-lime;
+}
+.currency-symbol-error {
+    @apply bg-red-hsl;
+    @apply text-white;
+}
